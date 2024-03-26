@@ -1,0 +1,25 @@
+.button {
+    padding: 2rem 3rem;
+    width: 100%;
+    border-radius: 1.6rem;
+    font-family: $appetite;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: $white;
+    background-color: $red;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
+    transition: background-color .3s linear, color .3s linear;
+
+    &:hover {
+        background-color: $white;
+        color: $aquamarine;
+    }
+
+    @include tablet {
+        font-size: 1.6rem;
+    }
+}

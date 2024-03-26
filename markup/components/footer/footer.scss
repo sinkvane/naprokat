@@ -1,0 +1,109 @@
+.footer {
+    position: relative;
+    background-image: url('../../static/img/general/footer-bg.webp');
+    background-size: 100%;
+
+    &::before {
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        content: '';
+        background-color: rgba($bgColor, 0.7);
+        background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, #074e65 100%);
+    }
+
+    &::after {
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        content: '';
+        background-color: rgba($bgColor, 1);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #074e65 100%);
+    }
+}
+
+.footer__inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    row-gap: 6rem;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > a > img {
+        @include laptop {
+            width: 100px;
+            height: 100px;
+        }
+
+        @include tablet {
+            width: 90px;
+            height: 90px;
+        }
+
+        @include tablet {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    @include tablet {
+        flex-direction: column;
+        row-gap: 3.2rem;
+    }
+}
+
+.footer__nav {
+    & > ul {
+        display: flex;
+    }
+
+    @include tablet {
+        & > ul {
+            display: none;
+        }
+    }
+}
+
+.footer__credits {
+    display: flex;
+    justify-content: space-between;
+
+    & > span,
+    a {
+        text-decoration: none;
+        font-family: $inter;
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: $white;
+        line-height: 140%;
+
+        @include tablet {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 3.2rem;
+    }
+
+    @include mobile {
+        align-items: flex-start;
+    }
+}

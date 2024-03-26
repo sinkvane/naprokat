@@ -1,0 +1,72 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    padding: 5rem 0;
+}
+
+.tabs__title {
+    font-family: $appetite;
+    font-weight: 700;
+    line-height: 160%;
+    font-size: 4.8rem;
+    color: $white;
+
+    @include laptop {
+        font-size: 4rem;
+    }
+
+    @include tablet {
+        font-size: 3.2rem;
+    }
+}
+
+.tabs__item {
+    background-color: $aquamarine;
+    border-radius: 1.6rem;
+    padding: 2rem 3rem;
+    row-gap: 1rem;
+    border: 2px solid $white;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.tabs__button {
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: $appetite;
+    font-weight: 600;
+    font-size: 2rem;
+    color: $white;
+    text-align: left;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include tablet {
+        font-size: 1.8rem;
+    }
+}
+
+.tabs__info {
+    overflow: hidden;
+    transition: padding-top, 0.5s linear, height 0.5s ease;
+    height: 0;
+
+    & > span {
+        font-family: $inter;
+        font-weight: 400;
+        color: $white;
+        line-height: 140%;
+        font-size: 1.8rem;
+
+        @include tablet {
+            font-size: 1.6rem;
+        }
+    }
+}

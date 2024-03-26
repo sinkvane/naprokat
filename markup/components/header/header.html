@@ -1,0 +1,41 @@
+<header class="wrapper header">
+
+    <a href="index.html" class="header__link">
+        <img src="static/img/general/logo.webp" alt="logo">
+    </a>
+
+    <nav class="header__nav">
+        <ul>
+            <li class="nav__item">
+                <a href="index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+                <a data-anchor="technique" href="#">Услуги</a>
+            </li>
+            <li class="nav__item">
+                <a data-anchor="certificate" href="#">Подарочные сертификаты</a>
+            </li>
+            <li class="nav__item">
+                <a data-anchor="about" href="#">О нас</a>
+            </li>
+            <li class="nav__item">
+                <a href="rules.html">Правила</a>
+            </li>
+            <li class="nav__item">
+                <a data-anchor="contact" href="#">Контакты</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="header__nav--left">
+        {{> headerPhone/headerPhone }}
+
+        <button class="burger__open">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </nav>
+
+
+</header>

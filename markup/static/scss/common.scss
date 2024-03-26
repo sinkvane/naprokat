@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Inter;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background-color: $bgColor;
+}
+
+.wrapper {
+    max-width: 1380px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    @include mobile {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

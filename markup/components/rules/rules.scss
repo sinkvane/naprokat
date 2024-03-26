@@ -1,0 +1,73 @@
+.rules {
+    padding-top: 5rem;
+}
+
+.rules__title {
+    font-family: $inter;
+    font-weight: 600;
+    font-size: 5.2rem;
+    line-height: 140%;
+    color: $white;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+
+    @include laptop {
+        font-size: 4rem;
+    }
+
+    @include small-tablet {
+        font-size: 3rem;
+    }
+}
+
+.rules__suptitle {
+    font-family: $inter;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 140%;
+    color: $white;
+    letter-spacing: 0.2rem;
+
+    @include laptop {
+        font-size: 2.6rem;
+    }
+
+    @include small-tablet {
+        font-size: 2rem;
+    }
+}
+
+.rules__items {
+    margin-top: 3rem;
+    list-style: decimal;
+
+    &--circle {
+        list-style: disc;
+
+        & > li {
+            margin-left: 1rem;
+            padding: 1rem 0;
+            font-size: 1.6rem;
+
+            @include tablet {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    & > li {
+        font-size: 1.8rem;
+        color: $white;
+        line-height: 160%;
+        padding: 1rem 0;
+
+        @include laptop {
+            font-size: 1.6rem;
+        }
+
+        @include small-tablet {
+            font-size: 1.4rem;
+            margin: 0 1rem;
+        }
+    }
+}

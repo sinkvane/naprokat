@@ -1,0 +1,74 @@
+.advantages {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 0 6rem;
+
+    @include small-tablet {
+    justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: top;
+        row-gap: 3.2rem;
+    }
+}
+
+.advantages__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.6rem;
+    max-width: 19rem;
+
+    @include laptop {
+        max-width: 14rem;
+    }
+
+    @include mobile {
+        max-width: 12rem;
+    }
+}
+
+.advantages__circle {
+    border-radius: 50%;
+    background-color: $aquamarine;
+    padding: 4.3rem;
+    border: 1rem solid $white;
+
+    @include laptop {
+        padding: 3.6rem;
+        border-width: .7rem;
+    }
+
+    @include mobile {
+        padding: 2rem;
+    }
+
+    & > svg {
+
+        @include laptop {
+            width: 3.6rem;
+            height: 3.6rem;
+        }
+
+        @include mobile {
+            width: 2.6rem;
+            height: 2.6rem;
+        }
+    }
+}
+
+.advantages__info {
+    font-family: $appetite;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 140%;
+    color: $white;
+    text-align: center;
+
+    @include tablet {
+        font-size: 1.6rem;
+    }
+
+    @include mobile {
+        font-size: 1.2rem;
+    }
+}

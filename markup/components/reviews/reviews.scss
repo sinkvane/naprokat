@@ -1,0 +1,43 @@
+.reviews {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include laptop {
+        flex-direction: column;
+        row-gap: 3.2rem;
+    }
+}
+
+.reviews__title {
+    font-family: $appetite;
+    font-weight: 700;
+    font-size: 4.8rem;
+    color: $white;
+    line-height: 160%;
+
+    @include laptop {
+        display: flex;
+        width: 100%;
+        font-size: 4rem;
+    }
+
+    @include tablet {
+        font-size: 3.2rem;
+    }
+}
+
+.reviews__block {
+    display: flex;
+    column-gap: 3.2rem;
+
+    @include tablet {
+        flex-direction: column;
+        row-gap: 3.2rem;
+    }
+
+    @include small-tablet {
+        width: 100%;
+    }
+}

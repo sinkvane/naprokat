@@ -1,0 +1,73 @@
+.header__phone {
+    & > svg {
+        margin-right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        transition: fill 0.3s linear, stroke 0.3s linear;
+        fill: $white;
+        stroke: $white;
+
+        @include tablet {
+            width: 20px;
+            height: 20px;
+        }
+
+        @include small-tablet {
+            width: 16px;
+            height: 16px;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    & > span {
+        font-family: $inter;
+        font-size: 1.8rem;
+        color: $white;
+        transition: color 0.3s linear;
+
+        @include tablet {
+            font-size: 1.6rem;
+        }
+
+        @include small-tablet {
+            font-size: 1.4rem;
+        }
+    }
+
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: $aquamarine;
+    border-radius: 1.6rem;
+    text-decoration: none;
+    border: 2px solid $white;
+    box-shadow: 1px 4px 50px 5px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s linear, border-color 0.3s linear;
+
+    &:hover {
+        background-color: $white;
+        border-color: $aquamarine;
+
+        & > span {
+            color: $aquamarine;
+        }
+
+        & > svg {
+            fill: $aquamarine;
+            stroke: $aquamarine;
+        }
+    }
+
+    @include tablet {
+        padding: 1.4rem 2rem;
+        margin-right: 1rem;
+    }
+
+    @include mobile {
+        padding: 1.2rem 1.4rem;
+        margin-right: 1rem;
+    }
+}

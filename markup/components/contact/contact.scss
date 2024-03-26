@@ -1,0 +1,113 @@
+.contact {
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 2.4rem;
+    background-color: $bgColor;
+    border-radius: 1.6rem;
+    row-gap: 2.4rem;
+    max-width: 320px;
+
+    @include laptop {
+        padding: 2rem;
+        left: 1rem;
+    }
+
+    @include tablet {
+        position: relative;
+        top: 0;
+        left: 50%;
+        margin-right: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    @include small-tablet {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        max-width: none;
+        width: 100%;
+        padding: 3rem;
+    }
+}
+
+.contact__title {
+    font-family: $appetite;
+    font-weight: 700;
+    color: $white;
+    font-size: 3.2rem;
+    line-height: 160%;
+    text-align: center;
+
+    @include laptop {
+        font-size: 2.6rem;
+    }
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+}
+
+.contact__item {
+    width: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+
+    & > a,
+    span {
+        text-decoration: none;
+        color: $white;
+        font-family: $inter;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 140%;
+        transition: color 0.3s linear;
+
+        @include laptop {
+            font-size: 1.6rem;
+        }
+    }
+
+    & > svg {
+        width: 2.4rem;
+        height: 2.4rem;
+
+        @include laptop {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &:hover {
+        & > a {
+            color: $yellow;
+        }
+    }
+}
+
+.contact__socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > a > svg {
+        transition: transform 0.3s linear;
+
+        @include laptop {
+            width: 3.6rem;
+            height: 3.6rem;
+        }
+    }
+
+    & > a:hover {
+        & > svg {
+            transform: scale(1.2);
+        }
+    }
+}
